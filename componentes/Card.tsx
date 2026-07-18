@@ -1,3 +1,8 @@
-export function Card(props: any) {
-    return <div className="bg white text-black rounded-x1 shadow-lg font-bold">Nome: {props.nome}, Cargo: {props.cargo}</div>
+export function Card({ nome, cargo }: any) {
+    return (
+        <div className="rounded-sm absolute top-0 right-70 bg white p-6 w-100 shadow-lg text-center">
+            <h3 className="text-x1 font-bold text-black">{nome}</h3>
+            <p className="text-slate-400">{cargo}</p>
+        </div>
+    );
 }
