@@ -1,5 +1,5 @@
 function Cartao( {nome}: any) {
-    return <div className="bg-white p-4 text-slate-800 rounded-x1 shadow-md text-center">{nome}</div>
+    return <div className="bg-white p-5 text-slate-800 rounded-x1 shadow-md text-center">{nome}</div>
 }
 
 export function Pessoas() {
