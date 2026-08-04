@@ -1,7 +1,5 @@
-export default function Titulo() {
+export default function Titulo({ nome }: { nome: string }) {
     return (
-        <div>
-            Curso Front-end
-        </div>
+        <div className="bg-slate-800 text-white font-bold p-5 mb-3">{nome}</div>
     );
 }
