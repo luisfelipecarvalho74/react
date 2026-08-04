@@ -6,7 +6,12 @@ import { Contador } from "@/componentes/Contador";
 import { SecaoTurma } from "@/componentes/SecaoTurma";
 import { Pagina } from "@/componentes/Pagina";
 import { MuralDaTurma } from "@/componentes/Muraldaturma";
-import { Children } from "react";
+import { Painel } from "@/componentes/Painel";
+import { Alunos } from "@/componentes/Alunos";
+import { Lista } from "@/componentes/Lista";
+import { Turma } from "@/componentes/Turma";
+import { Cursos } from "@/componentes/Cursos";
+import { PropNumero } from "@/componentes/PropNumero";
 
 
 export default function Home() {
@@ -14,13 +19,27 @@ export default function Home() {
   const curso = "Front-end";
   return (
     <div>
-      <Titulo curso="Front-end"/>
+      <Titulo nome="Curso Front-end"/>
 
-      <div className="flex gap-2 p-5">
-        <CardAluno nome="Luis Felipe" curso="Front-end" nota={8.5} presente={true} bolsista={true}/>
-        <CardAluno nome="Daniel Guimarães" curso="Front-end" nota={6} presente={false} bolsista={false}/>
-        <CardAluno nome="Ana Carolina" curso={curso} nota={9} presente={true} bolsista={false}/>
+      <Painel titulo="Turma Front-end" children="11 alunos matriculados">
+      </Painel>
+
+      <div className="flex gap-2 p-5 bg-slate-800">
+        <CardAluno aluno={{ nome: "Luis Felipe", curso: "Front-end", nota: 7, presente: true, bolsista: true }} />
+        <CardAluno aluno={{ nome: "Daniel Guimarães", curso: "Front-end", nota: 5, presente: false, bolsista: true }} />
+        <CardAluno aluno={{ nome: "Ana Silva", curso: "Front-end", nota: 8, presente: true }} />
       </div>
+
+      <Alunos nome="Luis Felipe" curso="Front-end" situacao="aprovado" cor="verde"/>
+
+      <Turma />
+
+      <Lista />
+
+      <Cursos />
+
+      <PropNumero nome="Luis Felipe" nota={7} />
+
       <p className="p-1 text-slate-600">{`${nome} - ${curso}`}</p>
 
       <p className="font-sans p-1">Nota final: {8 + 1}</p>

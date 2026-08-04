@@ -1,12 +1,17 @@
-export default function CardAluno({ nome, curso = "Front-end", nota, presente, bolsista }: { nome: string; curso: string; nota: number; presente: boolean; bolsista: boolean; }) {
+type Aluno = { nome: string
+    curso: string;
+    nota: number;
+    presente: boolean;
+    bolsista?: boolean;
+ };
+
+export default function CardAluno({ aluno }: { aluno: Aluno }) {
     return(
-        <div className="bg-blue-900 rounded-2xl font-bold px-4 py-2 text-center">
-           <div className="text">😎</div>
-           <div className="text-center font-bold text-white">{nome}</div>
-           <div className="text-center text-slate-300">{curso}</div>
-           <div className="text-center text black">{nota}</div>
-           <div className="text-center text-black">{presente ? "🟢" : "⚪"}</div>
-           <div className="text-center text-black">{bolsista && <span>🎓</span>}</div>
+        <div className="bg-blue-900 rounded font-bold px-6 py-2 text-center items-center justify-center">
+           <div className="text-2-1">😎</div>
+           <h3 className="text-center font-bold text-slate-200">{aluno.nome} {aluno.bolsista && "🎓"}</h3>
+           <div className="text-center text-slate-200">{aluno.curso} • nota {aluno.nota} {aluno.nota >= 6 ? "✅" : "❌"}</div>
+           <div className="text-center">{aluno.presente ? "🟢" : "⚪"}</div>
         </div>
     );
 }

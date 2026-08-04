@@ -1,7 +1,5 @@
-export default function Titulo({ curso }: { curso: string }) {
+export default function Titulo({ nome }: { nome: string }) {
     return (
-        <div>
-            <h1 className="bg-white text-slate-800 text-3xl p-3 rounded-lg text-center font-bold">{curso}</h1>
-        </div>
+        <div className="bg-slate-800 text-white font-bold p-5 mb-3">{nome}</div>
     );
 }
