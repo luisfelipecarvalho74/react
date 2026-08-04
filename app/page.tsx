@@ -12,6 +12,7 @@ import { Lista } from "@/componentes/Lista";
 import { Turma } from "@/componentes/Turma";
 import { Cursos } from "@/componentes/Cursos";
 import { PropNumero } from "@/componentes/PropNumero";
+import { Ola } from "@/componentes/Ola";
 
 
 export default function Home() {
@@ -20,6 +21,8 @@ export default function Home() {
   return (
     <div>
       <Titulo nome="Curso Front-end"/>
+
+      <Ola/>
 
       <Painel titulo="Turma Front-end" children="11 alunos matriculados">
       </Painel>
