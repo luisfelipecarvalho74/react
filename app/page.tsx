@@ -1,3 +1,5 @@
+'use client';
+
 import CardAluno from "@/componentes/CardAluno";
 import Rodape from "@/componentes/Rodape";
 import Titulo from "@/componentes/Titulo";
@@ -13,6 +15,10 @@ import { Turma } from "@/componentes/Turma";
 import { Cursos } from "@/componentes/Cursos";
 import { PropNumero } from "@/componentes/PropNumero";
 import { Ola } from "@/componentes/Ola";
+import { use } from "react";
+import { ContadorMaisUm } from "@/componentes/ContadorMaisUm";
+import { ContadorRetroativo } from "@/componentes/ContadorRetroativo";
+import { LigaDesliga } from "@/componentes/LigaDesliga";
 
 
 export default function Home() {
@@ -21,8 +27,14 @@ export default function Home() {
   return (
     <div>
       <Titulo nome="Curso Front-end"/>
+      <LigaDesliga />
 
       <Ola/>
+
+      <ContadorMaisUm />
+ 
+      <ContadorRetroativo />
+
 
       <Painel titulo="Turma Front-end" children="11 alunos matriculados">
       </Painel>
