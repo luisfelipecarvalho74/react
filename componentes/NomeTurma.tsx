@@ -2,11 +2,11 @@
 import { useState } from "react";
 
 
-export function NomeTurma( {nome, idade, turma}: any ){
+export function NomeTurma( {cep, rua, bairro, cidade, uf}: any ){
     const [form, setForm] = useState<{ nome: string; idade: string; turma: string }>({ nome: "", idade: "", turma: ""});
 
     return(
-        <div className="flex flex-col gap-3 p-5 bg-slate-400">
+        <div className="flex flex-col items-center gap-3 p-5 bg-slate-400 w-100">
             <h1 className="text-black text-3xl text-center font-bold m-4">Formulário</h1>
             <input className="bg-white text-black" 
             value={form.nome}
