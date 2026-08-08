@@ -20,6 +20,15 @@ import { ContadorMaisUm } from "@/componentes/ContadorMaisUm";
 import { ContadorRetroativo } from "@/componentes/ContadorRetroativo";
 import { LigaDesliga } from "@/componentes/LigaDesliga";
 import { TrocaCor } from "@/componentes/TrocaCor";
+import { Presente } from "@/componentes/Presente";
+import { Curtidas } from "@/componentes/Curtidas";
+import { Adicionar } from "@/componentes/Adicionar";
+import { Remover } from "@/componentes/Remover";
+import { AlunosPresentes } from "@/componentes/AlunosPresentes";
+import { BotaoCurso } from "@/componentes/BotaoCurso";
+import { SoPresente } from "@/componentes/SoPresente";
+import { PresencaInterativa } from "@/componentes/PresencaInterativa";
+import { MiniMatricula } from "@/componentes/MiniMatricula";
 
 function MostarEsconder() {
   const [visivel, setVisivel] = useState<boolean>(false)
@@ -56,11 +65,31 @@ export default function Home() {
       <Titulo nome="Curso Front-end"/>
       <LigaDesliga />
 
+      <MiniMatricula />
+
+      <Painel />
+
       <InputControlado />
 
       <Ola/>
 
       <MostarEsconder />
+
+      <Presente />
+
+      <AlunosPresentes />
+
+      <SoPresente />
+
+      <PresencaInterativa />
+
+      <BotaoCurso />
+      
+      <Curtidas />
+
+      <Adicionar />
+
+      <Remover />
 
       <ContadorMaisUm />
  
